@@ -1,79 +1,90 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Roll the Dice
 
-# Getting Started
+This is a simple and interactive React Native application that allows users to roll a dice. Each roll of the dice produces a random result, displays an animation, triggers haptic feedback, and plays a sound. The history of the dice rolls is displayed in a grid format.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- **Dice Rolling Animation**: The dice rotates and scales to create an engaging visual effect.
+- **Haptic Feedback**: Provides tactile feedback when the dice is rolled.
+- **Sound Effect**: Plays a sound each time the dice is rolled.
+- **History Tracking**: Displays a grid of previous dice roll results.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Prerequisites
 
-```bash
-# using npm
-npm start
+- **Node.js**: Ensure that you have Node.js installed. This project requires Node.js version `>=18`.
+- **React Native CLI**: This project uses React Native CLI, not Expo.
 
-# OR using Yarn
-yarn start
-```
+### Steps
 
-## Step 2: Start your Application
+1. **Clone the repository**:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+   ```sh
+   git clone https://github.com/amitkrvr/rollTheDice-ReactNative.git
+   cd rollTheDice
+   ```
 
-### For Android
+2. **Install dependencies**:
 
-```bash
-# using npm
-npm run android
+   ```sh
+   npm install
+   ```
 
-# OR using Yarn
-yarn android
-```
+3. **Link the native dependencies** (if necessary):
 
-### For iOS
+   ```sh
+   npx react-native link
+   ```
 
-```bash
-# using npm
-npm run ios
+4. **Run the project**:
+   - For Android:
+     ```sh
+     npm run android
+     ```
+   - For iOS:
+     ```sh
+     npm run ios
+     ```
 
-# OR using Yarn
-yarn ios
-```
+## Usage
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+1. **Roll the Dice**: Tap the "Roll Dice" button to roll the dice. The result will be displayed in the center of the screen with a rotation animation.
+2. **View History**: The results of previous dice rolls will appear in a grid below the dice. The results are displayed as numbers with a background color.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Project Structure
 
-## Step 3: Modifying your App
+- **App.tsx**: Main component that contains the logic for rolling the dice, playing the sound, and displaying the history.
+- **assets/**: Contains the images of the dice faces used in the app.
+- **styles/**: Contains the styles for various components.
 
-Now that you have successfully run the app, let's modify it.
+## Dependencies
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **react-native-haptic-feedback**: Used to trigger haptic feedback on supported devices.
+- **react-native-sound**: Used to play sound effects.
+- **react**: The core React library.
+- **react-native**: The core React Native library.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Development
 
-## Congratulations! :tada:
+### Scripts
 
-You've successfully run and modified your React Native App. :partying_face:
+- **`npm run android`**: Run the app on an Android device/emulator.
+- **`npm run ios`**: Run the app on an iOS device/simulator.
+- **`npm run start`**: Start the Metro bundler.
+- **`npm run lint`**: Run ESLint to check for code quality issues.
+- **`npm run test`**: Run the test suite using Jest.
 
-### Now what?
+### Customization
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- **Adding/Changing Sound**: Replace the `sound.mp3` file in the assets directory with your custom sound file.
+- **Customizing Dice Faces**: Replace the images in the `assets/` directory to change the appearance of the dice faces.
 
-# Troubleshooting
+## License
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-# Learn More
+## Acknowledgments
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Inspired by various dice rolling apps.
+- Thanks to the open-source community for the libraries and tools used in this project.
